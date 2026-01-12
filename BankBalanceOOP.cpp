@@ -25,7 +25,7 @@ double deposit(){
 	cin >> amount;
 	 if(amount >=1 && amount <=500){
 		cout << "Transaction complete!" << endl;
-		return amount;
+		balance += amount;
 	 }
 	 else{
 		cout << "Please write a number between 1-500!" << endl;
@@ -40,7 +40,7 @@ double withdraw(){
 	cin >> amount;
 		if(amount < balance){
 			cout << "Transaction complete!" << endl;
-			return amount;
+			balance -= amount;
 		}
 		else{
 			cout << "Insufficient funds!" << endl;
@@ -89,5 +89,6 @@ int main() {
 	
 	return 0;
 }
+
 
 
